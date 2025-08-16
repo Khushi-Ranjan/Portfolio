@@ -95,10 +95,10 @@ export default function App() {
           About Me
         </h3>
         <p className="text-gray-300 text-lg leading-relaxed text-center">
-          I’m a passionate developer who loves building sleek, user-friendly
+          I’m a passionate web developer who loves building sleek, user friendly
           interfaces with modern tools like React and Tailwind CSS. My focus is
-          on creating experiences that are not just functional, but visually
-          stunning — blending technology and design into something magical. 💜
+          on creating web experiences that are not just functional, but visually
+          stunning,by blending technology and design into something magical. 💜
         </p>
       </section>
 
