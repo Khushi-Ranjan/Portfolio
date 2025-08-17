@@ -1,16 +1,18 @@
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import chess from './img/chess.png';
+
 export default function App() {
-  // Add your projects as objects with title, description, link, and image
+
   const projects = [
     {
       title: "Chess Game",
       description:
         "A modern chess game built with React. Play online and challenge your friends.",
       link: "https://chess-theta-green.vercel.app/",
-      image: "https://chess-theta-green.vercel.app/chess-preview.png", // Replace with your actual preview image URL
+      image: chess
     },
-    // Add other projects below as needed
+   
     {
       title: "Project 2",
       description: "A short description about Project 2 and its features.",
