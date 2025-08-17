@@ -14,8 +14,7 @@ export default function App() {
       description:
         "A modern chess game built with React. Play online and challenge your friends.",
       link: "https://chess-theta-green.vercel.app/",
-<<<<<<< HEAD
-      image: "https://chess-theta-green.vercel.app/chess-preview.png", // Replace with your actual preview image URL
+      image: chess
     },
     // Add other projects below as needed
 =======
