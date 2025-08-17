@@ -1,12 +1,36 @@
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 export default function App() {
+  // Add your projects as objects with title, description, link, and image
+  const projects = [
+    {
+      title: "Chess Game",
+      description:
+        "A modern chess game built with React. Play online and challenge your friends.",
+      link: "https://chess-theta-green.vercel.app/",
+      image: "https://chess-theta-green.vercel.app/chess-preview.png", // Replace with your actual preview image URL
+    },
+    // Add other projects below as needed
+    {
+      title: "Project 2",
+      description: "A short description about Project 2 and its features.",
+      link: "#",
+      image: "", // Add image URL if available
+    },
+    {
+      title: "Project 3",
+      description: "A short description about Project 3 and its features.",
+      link: "#",
+      image: "", // Add image URL if available
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-900 via-purple-800 to-black text-white">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-8 py-4 bg-purple-950 bg-opacity-40 backdrop-blur-lg sticky top-0">
         <h1 className="text-3xl font-bold text-violet-400 tracking-wide">
-         PORTFOLIO 
+          PORTFOLIO
         </h1>
         <ul className="flex gap-6 text-lg">
           <li>
@@ -69,21 +93,31 @@ export default function App() {
         </h3>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[1, 2, 3].map((project) => (
+          {projects.map((project, idx) => (
             <div
-              key={project}
+              key={idx}
               className="bg-purple-950 bg-opacity-40 backdrop-blur-lg p-6 rounded-2xl border border-violet-500/30 hover:border-violet-400 transition-all hover:scale-105 shadow-lg hover:shadow-violet-500/50"
             >
-              <div className="h-40 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl mb-4"></div>
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title + " preview"}
+                  className="h-40 w-full object-cover rounded-xl mb-4"
+                />
+              )}
               <h4 className="text-2xl font-semibold text-violet-300">
-                Project {project}
+                {project.title}
               </h4>
-              <p className="text-gray-400 mt-2">
-                A short description about Project {project} and its features.
-              </p>
-              <button className="mt-4 px-4 py-2 bg-violet-500 hover:bg-violet-600 rounded-full shadow-lg shadow-violet-500/50">
-                View More
-              </button>
+              <p className="text-gray-400 mt-2">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="mt-4 px-4 py-2 bg-violet-500 hover:bg-violet-600 rounded-full shadow-lg shadow-violet-500/50">
+                  View More
+                </button>
+              </a>
             </div>
           ))}
         </div>
@@ -95,15 +129,15 @@ export default function App() {
           About Me
         </h3>
         <p className="text-gray-300 text-lg leading-relaxed text-center">
-          I’m a passionate web developer who loves building sleek, user friendly
+          I’m a passionate developer who loves building sleek, user-friendly
           interfaces with modern tools like React and Tailwind CSS. My focus is
-          on creating web experiences that are not just functional, but visually
-          stunning,by blending technology and design into something magical. 💜
+          on creating experiences that are not just functional, but visually
+          stunning — blending technology and design into something magical. 💜
         </p>
       </section>
 
       {/* Contact Section */}
-    <Contact/>
+      <Contact />
       {/* Footer */}
       <Footer />
     </div>
